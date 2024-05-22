@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './navtop.component.css'
 })
 export class NavtopComponent {
-
+dropdown: boolean = false;
+drowdown2: boolean = false;
+dropdown2: any;
 }

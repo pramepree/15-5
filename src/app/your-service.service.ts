@@ -12,7 +12,7 @@ export class YourService {
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/`);
+    return this.http.get<any>(`${this.apiUrl}/articles`);
   }
 
   createData(data: any): Observable<any> {
