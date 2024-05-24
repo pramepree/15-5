@@ -13,7 +13,7 @@ export class TextinputComponent {
   formSubmitted: boolean = false;
   data: any;
   dataString?: string;
-  static data: any;
+  static readonly data: any;
   constructor(private yourService: YourService) { }
   
   submit(form: NgForm) {

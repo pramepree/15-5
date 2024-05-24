@@ -1,3 +1,6 @@
+
+LIFF_ID=2005388842-ZJLby0kd
+
 # TryConnect
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
