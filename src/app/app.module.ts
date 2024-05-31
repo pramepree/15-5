@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { NavtopComponent } from './navtop/navtop.component';
 import { TableComponent } from './table/table.component';
 import { TextinputComponent } from './textinput/textinput.component';
+import { GrideComponent } from './gride/gride.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavtopComponent,
     TableComponent,
-    TextinputComponent
+    TextinputComponent,
+    GrideComponent
   ],
   imports: [
     BrowserModule,

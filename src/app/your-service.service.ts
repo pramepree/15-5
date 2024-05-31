@@ -7,14 +7,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class YourService {
-  private apiUrl = 'http://localhost:3000'; // URL ของเซิร์ฟเวอร์ Node.js
+  private apiUrl = 'http://localhost:5001'; // URL ของเซิร์ฟเวอร์ Node.js
 
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/articles`);
+    return this.http.get<any>(`${this.apiUrl}/api1`);
   }
-
+  getDataFromGateway(uri: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${uri}`);
+  }
   createData(data: any): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/articles`, data);
   }

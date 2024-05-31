@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   private profile1?: any;
   private DisplayName: any;
   static readonly data: any;
-
+  responseData: any;
   getData() {
     return this.dataString;
   }
@@ -47,6 +47,15 @@ export class AppComponent implements OnInit {
     window.location.reload();
   }
   ngOnInit() {
+    this.yourService.getDataFromGateway('api1').subscribe(
+      (data) => {
+        this.responseData = data;
+        console.log(this.responseData); // แสดงผลลัพธ์ที่ได้รับในคอนโซล
+      },
+      (error) => {
+        console.error('Error fetching data from API Gateway:', error);
+      }
+    );
     this.yourService.getData().subscribe(
       (response) => {
         this.data = response;
