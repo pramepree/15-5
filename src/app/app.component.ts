@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { YourService } from './your-service.service';
+import { Api_Gateway_Service } from './Api_Gateway-service';
 import { get } from 'mongoose';
 import liff from '@line/liff';
 @Component({
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   getData() {
     return this.dataString;
   }
-  constructor(private yourService: YourService) {
+  constructor(private yourService: Api_Gateway_Service) {
     this.data =
     liff
       .init({

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { YourService } from '../your-service.service';
+import { Api_Gateway_Service } from '../Api_Gateway-service';
 
 @Component({
   selector: 'app-gride',
@@ -9,7 +9,7 @@ import { YourService } from '../your-service.service';
 export class GrideComponent {
   data1: any[] = []; // Change to any[] to accommodate data from the API
 
-  constructor(private yourService: YourService) {
+  constructor(private yourService: Api_Gateway_Service) {
     this.yourService.getDataFromGateway('api1').subscribe(
       (data) => {
         console.log(data); // Log the response data to console

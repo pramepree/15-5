@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { YourService } from '../your-service.service';
+import { Api_Gateway_Service } from '../Api_Gateway-service';
 
 @Component({
   selector: 'app-textinput',
@@ -14,7 +14,7 @@ export class TextinputComponent {
   data: any;
   dataString?: string;
   static readonly data: any;
-  constructor(private yourService: YourService) { }
+  constructor(private yourService: Api_Gateway_Service) { }
   
   submit(form: NgForm) {
     
