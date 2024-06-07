@@ -12,6 +12,7 @@ import { GrideComponent } from './gride/gride.component';
 import { FormComponent } from './form/form.component';
 import { GridComponent } from './grid/grid.component';
 import { WriteOOpComponent } from './write-oop/write-oop.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { WriteOOpComponent } from './write-oop/write-oop.component';
     FormComponent,
     GridComponent,
     WriteOOpComponent,
+    ImageComponent,
   ],
   imports: [
     BrowserModule,
