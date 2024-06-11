@@ -19,8 +19,7 @@ export class AppComponent implements OnInit {
     return this.dataString;
   }
   constructor(private yourService: Api_Gateway_Service) {
-    this.data =
-    liff
+    this.data = liff
       .init({
         liffId: '2005388842-ZJLby0kd',
       })
@@ -46,6 +45,9 @@ export class AppComponent implements OnInit {
     liff.logout();
     window.location.reload();
   }
+
+ 
+
   ngOnInit() {
     this.yourService.getDataFromGateway('api1').subscribe(
       (data) => {
@@ -67,6 +69,19 @@ export class AppComponent implements OnInit {
       }
     );
   }
+
+getNew(){
+     this.yourService.getData().subscribe(
+      (response) => {
+        this.data = response;
+        this.dataString = JSON.stringify(this.data, null, 2);
+        console.log(this.data);
+      },
+      (error) => {
+        console.error('Error occurred:', error);
+      }
+    );
+}
 
   createData() {
     const newData = [

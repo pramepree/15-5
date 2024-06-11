@@ -13,6 +13,8 @@ import { FormComponent } from './form/form.component';
 import { GridComponent } from './grid/grid.component';
 import { WriteOOpComponent } from './write-oop/write-oop.component';
 import { ImageComponent } from './image/image.component';
+import { CallbacktestComponent } from './callbacktest/callbacktest.component';
+import { SeeComponent } from './see/see.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ImageComponent } from './image/image.component';
     GridComponent,
     WriteOOpComponent,
     ImageComponent,
+    CallbacktestComponent,
+    SeeComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,16 +8,16 @@ import { Api_Gateway_Service } from '../Api_Gateway-service';
   styleUrls: ['./textinput.component.css'],
 })
 export class TextinputComponent {
-  firstName: string = '';
-  lastName: string = '';
+  user: string = '';
+  password: string = '';
+  email: string = '';
   formSubmitted: boolean = false;
   data: any;
   dataString?: string;
-  static readonly data: any;
+
   constructor(private yourService: Api_Gateway_Service) { }
-  
+
   submit(form: NgForm) {
-    
     this.formSubmitted = true;
     if (form.valid) {
       this.createData();
@@ -27,15 +27,15 @@ export class TextinputComponent {
       console.log('Form is invalid');
     }
   }
-  createData() {
-    const newData = [
-      {
-        title: 'Basic Cache 101',
-        content: 'Some content here...'
-      }
-    ];
 
-    this.yourService.createData(newData).subscribe(
+  createData() {
+    const jsonData = {
+      "user": this.user,
+      "password": this.password,
+      "email": this.email
+    };
+
+    this.yourService.createData(jsonData).subscribe(
       response => {
         console.log('Data created successfully:', response);
         this.yourService.getData().subscribe(
@@ -53,5 +53,4 @@ export class TextinputComponent {
       }
     );
   }
-  
 }
